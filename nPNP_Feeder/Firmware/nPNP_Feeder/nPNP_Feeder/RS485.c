@@ -6,6 +6,8 @@
 #include <stdint.h>
 #include <string.h>
 
+volatile uint8_t uartData;
+
 void RS485_init()
 {
 	//Set baud rate
@@ -36,14 +38,7 @@ void RS485_Transmit_string(char *string)
 
 ISR(USART_RX_vect)
 {
-	uint8_t data = UDR0; //Received data must be read to clear RXC flag
-	if (data == 'a')
-	{
-		if(Servo_move(20, forward, slow) != SERVO_OK)
-		{
-			Error_Handler();
-		}
-	}
+	uartData = UDR0; //Received data must be read to clear RXC flag
 }
 
 ISR(USART_TX_vect)

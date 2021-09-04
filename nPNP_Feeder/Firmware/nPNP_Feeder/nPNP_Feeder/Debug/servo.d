@@ -1,6 +1,5 @@
-servo.d servo.o: .././servo.c .././board.h .././servo.h \
- d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- .././RS485.h .././Board.h \
+servo.d servo.o: .././servo.c .././board.h .././servo.h .././RS485.h \
+ .././Board.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
@@ -24,8 +23,6 @@ servo.d servo.o: .././servo.c .././board.h .././servo.h \
 .././board.h:
 
 .././servo.h:
-
-d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
 
 .././RS485.h:
 

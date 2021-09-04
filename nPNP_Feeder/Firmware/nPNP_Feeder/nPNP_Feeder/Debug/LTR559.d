@@ -1,7 +1,7 @@
 LTR559.d LTR559.o: .././LTR559.c .././Board.h .././LTR559.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
- .././RS485.h \
+ .././RS485.h .././servo.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -23,6 +23,8 @@ d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.
 d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
 
 .././RS485.h:
+
+.././servo.h:
 
 d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 

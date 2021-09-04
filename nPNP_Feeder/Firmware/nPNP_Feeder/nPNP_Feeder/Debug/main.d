@@ -1,9 +1,7 @@
 main.d main.o: .././main.c .././board.h .././RS485.h .././Board.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
- .././servo.h \
- d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- .././LTR559.h \
+ .././servo.h .././LTR559.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -30,8 +28,6 @@ d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.
 d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
 
 .././servo.h:
-
-d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
 
 .././LTR559.h:
 

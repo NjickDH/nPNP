@@ -13,6 +13,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+extern volatile uint8_t uartData;
 int main(void)
 {
 	Board_init();		
@@ -23,24 +24,28 @@ int main(void)
 	sei(); //Enable interrupts
 	
     while (1) 
-    {
-// 		TWI_Read_proximity(); //Used to test LTR559 by reading PS data and transmitting over RS485 to pc
-// 		_delay_ms(1000);
+    {		
+		switch(uartData)
+		{
+			case 'f':
+				OCR1A = 2287;
+				uartData = 0;
+				break;
+			case 'b':
+				OCR1A = 2339;
+				uartData = 0;	
+				break;
+		}
+
 		while((PIND & (1 << BUTTON_A)) == (1 << BUTTON_A))
 		{
-			if(Servo_move(1, forward, slow) != SERVO_OK)
-			{
-				Error_Handler();
-			}
+			OCR1A = 2287;
 			_delay_ms(100);
 		}
 		
 		while((PIND & (1 << BUTTON_B)) == (1 << BUTTON_B))
 		{
-			if(Servo_move(1, reverse, slow) != SERVO_OK)
-			{
-				Error_Handler();
-			}
+			OCR1A = 2339;
 			_delay_ms(100);
  		}
 	}

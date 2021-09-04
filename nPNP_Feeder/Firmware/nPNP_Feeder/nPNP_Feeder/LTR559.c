@@ -1,6 +1,7 @@
 #include "Board.h"
 #include "LTR559.h"
 #include "RS485.h"
+#include "servo.h"
 #include <avr/io.h>
 #include <stdint.h>
 #include <avr/interrupt.h>
@@ -16,8 +17,8 @@ void LTR559_Init()
 	//TWI_Write_register(PS_LED, 0b01101011); //60Khz LED pulse - DUTY 50% - LED 50mA
 	TWI_Write_register(PS_CONTR, 0x03); //Active mode - saturation indicator off
 	TWI_Write_register(PS_MEAS_RATE, 0x08); //10ms measurement repeat rate
-	TWI_Write_register(PS_THRES_UP_0, 255); //Upper interrupt threshold - 12 bit value
-	TWI_Write_register(PS_THRES_UP_1, 3);
+	TWI_Write_register(PS_THRES_UP_0, 100); //Upper interrupt threshold - 12 bit value
+	TWI_Write_register(PS_THRES_UP_1, 5);
 	TWI_Write_register(PS_THRES_LOW_0, 0); //Lower interrupt threshold - 12 bit value
 	TWI_Write_register(PS_THRES_LOW_1, 0);
 	//TWI_Write_register(INTERRUPT_PRST, 0b10100000); //Interrupt persist - 10 consecutive PS values out of threshold range
@@ -100,5 +101,9 @@ void TWI_Read_proximity()
 
 ISR(PCINT1_vect)
 {
-	PORTD ^= (1 << LED_G); //Toggle led when rotary encoder makes threshold go above configured value
+	if((PINC & (1 << PINC2)) == (1 << PINC2))
+	{
+		PORTD ^= (1 << LED_B);
+		OCR1A = 2313;
+	}
 }
