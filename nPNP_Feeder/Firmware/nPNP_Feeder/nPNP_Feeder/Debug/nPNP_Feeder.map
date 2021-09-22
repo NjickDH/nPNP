@@ -22,10 +22,6 @@ Discarded input sections
  .text          0x00000000        0x0 LTR559.o
  .data          0x00000000        0x0 LTR559.o
  .bss           0x00000000        0x0 LTR559.o
- .text.TWI_Read_register
-                0x00000000       0x70 LTR559.o
- .text.TWI_Read_proximity
-                0x00000000       0x32 LTR559.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -35,8 +31,6 @@ Discarded input sections
  .text          0x00000000        0x0 RS485.o
  .data          0x00000000        0x0 RS485.o
  .bss           0x00000000        0x0 RS485.o
- .text.RS485_Transmit_byte
-                0x00000000       0x14 RS485.o
  .text.RS485_Transmit_string
                 0x00000000       0x3a RS485.o
  .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
@@ -202,7 +196,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x24a
+.text           0x00000000      0x328
  *(.vectors)
  .vectors       0x00000000       0x34 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
                 0x00000000                __vector_default
@@ -290,34 +284,43 @@ END GROUP
  .text.TWI_Init
                 0x00000074        0x8 LTR559.o
                 0x00000074                TWI_Init
+ .text.TWI_Read_register
+                0x0000007c       0x70 LTR559.o
+                0x0000007c                TWI_Read_register
  .text.TWI_Write_register
-                0x0000007c       0x4e LTR559.o
-                0x0000007c                TWI_Write_register
+                0x000000ec       0x4e LTR559.o
+                0x000000ec                TWI_Write_register
  .text.LTR559_Init
-                0x000000ca       0x42 LTR559.o
-                0x000000ca                LTR559_Init
+                0x0000013a       0x48 LTR559.o
+                0x0000013a                LTR559_Init
+ .text.TWI_Read_proximity
+                0x00000182       0x32 LTR559.o
+                0x00000182                TWI_Read_proximity
  .text.__vector_4
-                0x0000010c       0x34 LTR559.o
-                0x0000010c                __vector_4
- .text.main     0x00000140       0x82 main.o
-                0x00000140                main
+                0x000001b4       0x24 LTR559.o
+                0x000001b4                __vector_4
+ .text.main     0x000001d8       0xb4 main.o
+                0x000001d8                main
  .text.Timer_init
-                0x000001c2       0x26 servo.o
-                0x000001c2                Timer_init
+                0x0000028c       0x26 servo.o
+                0x0000028c                Timer_init
  .text.RS485_init
-                0x000001e8       0x20 RS485.o
-                0x000001e8                RS485_init
+                0x000002b2       0x20 RS485.o
+                0x000002b2                RS485_init
+ .text.RS485_Transmit_byte
+                0x000002d2       0x14 RS485.o
+                0x000002d2                RS485_Transmit_byte
  .text.__vector_18
-                0x00000208       0x20 RS485.o
-                0x00000208                __vector_18
+                0x000002e6       0x20 RS485.o
+                0x000002e6                __vector_18
  .text.__vector_20
-                0x00000228       0x1e RS485.o
-                0x00000228                __vector_20
-                0x00000246                . = ALIGN (0x2)
+                0x00000306       0x1e RS485.o
+                0x00000306                __vector_20
+                0x00000324                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000246        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
-                0x00000246                _exit
-                0x00000246                exit
+ .fini9         0x00000324        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x00000324                _exit
+                0x00000324                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -336,11 +339,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000246        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .fini0         0x00000324        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000024a                _etext = .
+                0x00000328                _etext = .
 
-.data           0x00800100        0x0 load address 0x0000024a
+.data           0x00800100        0x0 load address 0x00000328
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -360,8 +363,8 @@ END GROUP
  COMMON         0x00800100        0x1 RS485.o
                 0x00800100                uartData
                 0x00800101                PROVIDE (__bss_end, .)
-                0x0000024a                __data_load_start = LOADADDR (.data)
-                0x0000024a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000328                __data_load_start = LOADADDR (.data)
+                0x00000328                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800101        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -452,14 +455,14 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xd3a
+.debug_info     0x00000000      0xda9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_info    0x000005f4      0x151 board.o
- .debug_info    0x00000745      0x266 LTR559.o
- .debug_info    0x000009ab      0x1bf main.o
- .debug_info    0x00000b6a       0x94 servo.o
- .debug_info    0x00000bfe      0x13c RS485.o
+ .debug_info    0x00000745      0x286 LTR559.o
+ .debug_info    0x000009cb      0x20e main.o
+ .debug_info    0x00000bd9       0x94 servo.o
+ .debug_info    0x00000c6d      0x13c RS485.o
 
 .debug_abbrev   0x00000000      0xa0f
  *(.debug_abbrev)
@@ -470,14 +473,14 @@ END GROUP
  .debug_abbrev  0x000008cc       0x4f servo.o
  .debug_abbrev  0x0000091b       0xf4 RS485.o
 
-.debug_line     0x00000000      0x860
+.debug_line     0x00000000      0x884
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_line    0x00000134      0x16a board.o
- .debug_line    0x0000029e      0x246 LTR559.o
- .debug_line    0x000004e4      0x194 main.o
- .debug_line    0x00000678       0xab servo.o
- .debug_line    0x00000723      0x13d RS485.o
+ .debug_line    0x0000029e      0x240 LTR559.o
+ .debug_line    0x000004de      0x1be main.o
+ .debug_line    0x0000069c       0xab servo.o
+ .debug_line    0x00000747      0x13d RS485.o
 
 .debug_frame    0x00000000      0x1b0
  *(.debug_frame)
@@ -493,20 +496,20 @@ END GROUP
  .debug_str     0x00000209      0x196 board.o
                                 0x1ca (size before relaxing)
  .debug_str     0x0000039f       0xac LTR559.o
-                                0x205 (size before relaxing)
+                                0x20a (size before relaxing)
  .debug_str     0x0000044b       0x30 main.o
-                                0x1f4 (size before relaxing)
+                                0x207 (size before relaxing)
  .debug_str     0x0000047b        0xd servo.o
                                 0x17f (size before relaxing)
  .debug_str     0x00000488       0x47 RS485.o
                                 0x1d9 (size before relaxing)
 
-.debug_loc      0x00000000      0x35b
+.debug_loc      0x00000000      0x3a3
  *(.debug_loc)
  .debug_loc     0x00000000       0x90 board.o
  .debug_loc     0x00000090      0x120 LTR559.o
- .debug_loc     0x000001b0       0x90 main.o
- .debug_loc     0x00000240      0x11b RS485.o
+ .debug_loc     0x000001b0       0xd8 main.o
+ .debug_loc     0x00000288      0x11b RS485.o
 
 .debug_macinfo
  *(.debug_macinfo)

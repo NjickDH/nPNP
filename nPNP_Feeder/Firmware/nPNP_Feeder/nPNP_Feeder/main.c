@@ -14,6 +14,7 @@
 #include <util/delay.h>
 
 extern volatile uint8_t uartData;
+extern int count;
 int main(void)
 {
 	Board_init();		
@@ -22,9 +23,12 @@ int main(void)
 	LTR559_Init();
 	
 	sei(); //Enable interrupts
-	
+	OCR1A = 2300;
     while (1) 
     {		
+		TWI_Read_proximity();
+		_delay_ms(10);
+		
 		switch(uartData)
 		{
 			case 'f':
@@ -35,11 +39,15 @@ int main(void)
 				OCR1A = 2339;
 				uartData = 0;	
 				break;
+			case 'c':
+				OCR1A = 2300;
+				uartData = 0;
+				break;
 		}
 
 		while((PIND & (1 << BUTTON_A)) == (1 << BUTTON_A))
 		{
-			OCR1A = 2287;
+			OCR1A = 2250;
 			_delay_ms(100);
 		}
 		
