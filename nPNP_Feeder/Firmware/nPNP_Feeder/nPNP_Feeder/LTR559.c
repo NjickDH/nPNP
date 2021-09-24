@@ -17,15 +17,15 @@ void LTR559_Init()
 	
 	TWI_Init();
 	TWI_Write_register(LTR_INTERRUPT, 0x05); //INT active high - only PS trigger
-	//TWI_Write_register(PS_LED, 0b11111111); //60Khz LED pulse - DUTY 50% - LED 50mA
+	TWI_Write_register(PS_LED, 0b00011111); //60Khz LED pulse - DUTY 50% - LED 50mA
 	TWI_Write_register(PS_CONTR, 0x03); //Active mode - saturation indicator off
 	TWI_Write_register(PS_MEAS_RATE, 0x08); //10ms measurement repeat rate
-	TWI_Write_register(PS_THRES_UP_0, 0b01011110); //Upper interrupt threshold - 12 bit value
-	TWI_Write_register(PS_THRES_UP_1, 1);
+	TWI_Write_register(PS_THRES_UP_0, 150); //Upper interrupt threshold - 12 bit value
+	TWI_Write_register(PS_THRES_UP_1, 0);
 	TWI_Write_register(PS_THRES_LOW_0, 0); //Lower interrupt threshold - 12 bit value
 	TWI_Write_register(PS_THRES_LOW_1, 0);
 	
-	TWI_Write_register(0x83, 0b00001000); //Number of pulses
+	//TWI_Write_register(0x83, 0b00001000); //Number of pulses
 	//TWI_Write_register(INTERRUPT_PRST, 0b10100000); //Interrupt persist - 10 consecutive PS values out of threshold range
 }
 
@@ -95,7 +95,6 @@ void TWI_Write_register(uint8_t reg, uint8_t data)
 	TWCR = ((1 << TWEN) | (1 << TWINT) | (1 << TWSTO));
 }
 
-
 void TWI_Read_proximity()
 {
 	uint16_t psData = 0;
@@ -104,14 +103,18 @@ void TWI_Read_proximity()
 
 	RS485_Transmit_byte(psData);
 	RS485_Transmit_byte(psData >> 8);
-	
 }
 
+volatile int edgeCount = 0;
+extern volatile float cDutyCycle;
 ISR(PCINT1_vect)
-{
-// 	if((PINC & (1 << PINC2)) == (1 << PINC2))
-// 	{
-// 		PORTD ^= (1 << LED_B);
-// 		OCR1A = 2313;
-// 	}
+{	
+	if(cDutyCycle >= 1.5f)
+	{
+		edgeCount++;
+	}
+	else if(cDutyCycle <= 1.5f)
+	{
+		edgeCount--;
+	}
 }

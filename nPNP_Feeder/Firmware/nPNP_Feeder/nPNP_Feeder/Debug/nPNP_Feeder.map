@@ -1,9 +1,47 @@
 Archive member included to satisfy reference by file (symbol)
 
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+                              main.o (__subsf3)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o) (__addsf3x)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+                              LTR559.o (__lesf2)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+                              main.o (__divsf3)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o) (__divsf3x)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+                              servo.o (__fixunssfsi)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+                              main.o (__floatsisf)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o) (__fp_cmp)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_inf)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_nan)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_pscA)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_pscB)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o) (__fp_round)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_split3)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_zero)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+                              LTR559.o (__gesf2)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+                              main.o (__mulsf3)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
+                              d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o) (__mulsf3x)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
                               D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o (exit)
+d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
-                              RS485.o (__do_clear_bss)
+                              LTR559.o (__do_clear_bss)
 
 Allocating common symbols
 Common symbol       size              file
@@ -22,6 +60,10 @@ Discarded input sections
  .text          0x00000000        0x0 LTR559.o
  .data          0x00000000        0x0 LTR559.o
  .bss           0x00000000        0x0 LTR559.o
+ .text.TWI_Read_register
+                0x00000000       0x70 LTR559.o
+ .text.TWI_Read_proximity
+                0x00000000       0x32 LTR559.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -31,8 +73,64 @@ Discarded input sections
  .text          0x00000000        0x0 RS485.o
  .data          0x00000000        0x0 RS485.o
  .bss           0x00000000        0x0 RS485.o
+ .text.RS485_Transmit_byte
+                0x00000000       0x14 RS485.o
  .text.RS485_Transmit_string
                 0x00000000       0x3a RS485.o
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
  .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
@@ -49,6 +147,22 @@ Discarded input sections
                 0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .data          0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .bss           0x00000000        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
@@ -196,7 +310,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x328
+.text           0x00000000      0x8a6
  *(.vectors)
  .vectors       0x00000000       0x34 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
                 0x00000000                __vector_default
@@ -237,8 +351,10 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000040       0x10 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
-                0x00000040                __do_clear_bss
+ .init4         0x00000040       0x16 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x00000040                __do_copy_data
+ .init4         0x00000056       0x10 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x00000056                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -249,78 +365,137 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000050        0x4 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
+ .init9         0x00000066        0x4 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  *(.init9)
  *(.text)
- .text          0x00000054        0x2 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
-                0x00000054                __vector_22
-                0x00000054                __vector_1
-                0x00000054                __vector_24
-                0x00000054                __vector_12
-                0x00000054                __bad_interrupt
-                0x00000054                __vector_6
-                0x00000054                __vector_3
-                0x00000054                __vector_23
-                0x00000054                __vector_25
-                0x00000054                __vector_11
-                0x00000054                __vector_13
-                0x00000054                __vector_17
-                0x00000054                __vector_19
-                0x00000054                __vector_7
-                0x00000054                __vector_5
-                0x00000054                __vector_9
-                0x00000054                __vector_2
-                0x00000054                __vector_21
-                0x00000054                __vector_15
-                0x00000054                __vector_8
-                0x00000054                __vector_14
-                0x00000054                __vector_10
-                0x00000054                __vector_16
-                0x00000056                . = ALIGN (0x2)
+ .text          0x0000006a        0x2 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
+                0x0000006a                __vector_22
+                0x0000006a                __vector_1
+                0x0000006a                __vector_24
+                0x0000006a                __vector_12
+                0x0000006a                __bad_interrupt
+                0x0000006a                __vector_6
+                0x0000006a                __vector_3
+                0x0000006a                __vector_23
+                0x0000006a                __vector_25
+                0x0000006a                __vector_11
+                0x0000006a                __vector_13
+                0x0000006a                __vector_17
+                0x0000006a                __vector_19
+                0x0000006a                __vector_7
+                0x0000006a                __vector_5
+                0x0000006a                __vector_9
+                0x0000006a                __vector_2
+                0x0000006a                __vector_21
+                0x0000006a                __vector_15
+                0x0000006a                __vector_8
+                0x0000006a                __vector_14
+                0x0000006a                __vector_10
+                0x0000006a                __vector_16
+                0x0000006c                . = ALIGN (0x2)
  *(.text.*)
  .text.Board_init
-                0x00000056       0x1e board.o
-                0x00000056                Board_init
+                0x0000006c       0x1e board.o
+                0x0000006c                Board_init
  .text.TWI_Init
-                0x00000074        0x8 LTR559.o
-                0x00000074                TWI_Init
- .text.TWI_Read_register
-                0x0000007c       0x70 LTR559.o
-                0x0000007c                TWI_Read_register
+                0x0000008a        0x8 LTR559.o
+                0x0000008a                TWI_Init
  .text.TWI_Write_register
-                0x000000ec       0x4e LTR559.o
-                0x000000ec                TWI_Write_register
+                0x00000092       0x4e LTR559.o
+                0x00000092                TWI_Write_register
  .text.LTR559_Init
-                0x0000013a       0x48 LTR559.o
-                0x0000013a                LTR559_Init
- .text.TWI_Read_proximity
-                0x00000182       0x32 LTR559.o
-                0x00000182                TWI_Read_proximity
+                0x000000e0       0x48 LTR559.o
+                0x000000e0                LTR559_Init
  .text.__vector_4
-                0x000001b4       0x24 LTR559.o
-                0x000001b4                __vector_4
- .text.main     0x000001d8       0xb4 main.o
-                0x000001d8                main
+                0x00000128       0xa6 LTR559.o
+                0x00000128                __vector_4
+ .text.main     0x000001ce      0x1de main.o
+                0x000001ce                main
+ .text.DUTY_CYCLE
+                0x000003ac       0x48 servo.o
+                0x000003ac                DUTY_CYCLE
  .text.Timer_init
-                0x0000028c       0x26 servo.o
-                0x0000028c                Timer_init
+                0x000003f4       0x24 servo.o
+                0x000003f4                Timer_init
  .text.RS485_init
-                0x000002b2       0x20 RS485.o
-                0x000002b2                RS485_init
- .text.RS485_Transmit_byte
-                0x000002d2       0x14 RS485.o
-                0x000002d2                RS485_Transmit_byte
+                0x00000418       0x20 RS485.o
+                0x00000418                RS485_init
  .text.__vector_18
-                0x000002e6       0x20 RS485.o
-                0x000002e6                __vector_18
+                0x00000438       0x20 RS485.o
+                0x00000438                __vector_18
  .text.__vector_20
-                0x00000306       0x1e RS485.o
-                0x00000306                __vector_20
-                0x00000324                . = ALIGN (0x2)
+                0x00000458       0x1e RS485.o
+                0x00000458                __vector_20
+ .text.avr-libc.fplib
+                0x00000476        0xa d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+                0x00000476                __subsf3
+                0x00000478                __addsf3
+ .text.avr-libc.fplib
+                0x00000480       0xc0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+                0x0000049a                __addsf3x
+ .text.avr-libc.fplib
+                0x00000540        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+                0x00000540                __nesf2
+                0x00000540                __eqsf2
+                0x00000540                __cmpsf2
+                0x00000540                __ltsf2
+                0x00000540                __lesf2
+ .text.avr-libc.fplib
+                0x00000548        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+                0x00000548                __divsf3
+ .text.avr-libc.fplib
+                0x0000054c       0xcc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+                0x00000562                __divsf3x
+                0x00000566                __divsf3_pse
+ .text.avr-libc.fplib
+                0x00000618       0x58 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+                0x00000618                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00000670       0x7a d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+                0x00000670                __floatunsisf
+                0x00000674                __floatsisf
+ .text.avr-libc.fplib
+                0x000006ea       0x48 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+                0x000006ea                __fp_cmp
+ .text.avr-libc.fplib
+                0x00000732        0xc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+                0x00000732                __fp_inf
+ .text.avr-libc.fplib
+                0x0000073e        0x6 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+                0x0000073e                __fp_nan
+ .text.avr-libc.fplib
+                0x00000744        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+                0x00000744                __fp_pscA
+ .text.avr-libc.fplib
+                0x00000752        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+                0x00000752                __fp_pscB
+ .text.avr-libc.fplib
+                0x00000760       0x22 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+                0x00000760                __fp_round
+ .text.avr-libc.fplib
+                0x00000782       0x44 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+                0x00000782                __fp_split3
+                0x00000792                __fp_splitA
+ .text.avr-libc.fplib
+                0x000007c6        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+                0x000007c6                __fp_zero
+                0x000007c8                __fp_szero
+ .text.avr-libc.fplib
+                0x000007d4        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+                0x000007d4                __gesf2
+                0x000007d4                __gtsf2
+ .text.avr-libc.fplib
+                0x000007dc        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+                0x000007dc                __mulsf3
+ .text.avr-libc.fplib
+                0x000007e0       0xc2 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
+                0x000007f4                __mulsf3x
+                0x000007f8                __mulsf3_pse
+                0x000008a2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000324        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
-                0x00000324                _exit
-                0x00000324                exit
+ .fini9         0x000008a2        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000008a2                _exit
+                0x000008a2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -339,38 +514,59 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000324        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .fini0         0x000008a2        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000328                _etext = .
+                0x000008a6                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000328
-                [!provide]                PROVIDE (__data_start, .)
+.data           0x00800100       0x10 load address 0x000008a6
+                0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.dt       0x00800100        0x4 main.o
+                0x00800100                dt
+ .data.ki       0x00800104        0x4 main.o
+                0x00800104                ki
+ .data.kd       0x00800108        0x4 main.o
+                0x00800108                kd
+ .data.kp       0x0080010c        0x4 main.o
+                0x0080010c                kp
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800100                . = ALIGN (0x2)
-                0x00800100                _edata = .
-                [!provide]                PROVIDE (__data_end, .)
+                0x00800110                . = ALIGN (0x2)
+                0x00800110                _edata = .
+                0x00800110                PROVIDE (__data_end, .)
 
-.bss            0x00800100        0x1
-                0x00800100                PROVIDE (__bss_start, .)
+.bss            0x00800110       0x11
+                0x00800110                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.edgeCount
+                0x00800110        0x2 LTR559.o
+                0x00800110                edgeCount
+ .bss.setpoint  0x00800112        0x2 main.o
+                0x00800112                setpoint
+ .bss.eIntergral
+                0x00800114        0x4 main.o
+                0x00800114                eIntergral
+ .bss.ePrev     0x00800118        0x4 main.o
+                0x00800118                ePrev
+ .bss.cDutyCycle
+                0x0080011c        0x4 servo.o
+                0x0080011c                cDutyCycle
  *(COMMON)
- COMMON         0x00800100        0x1 RS485.o
-                0x00800100                uartData
-                0x00800101                PROVIDE (__bss_end, .)
-                0x00000328                __data_load_start = LOADADDR (.data)
-                0x00000328                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800120        0x1 RS485.o
+                0x00800120                uartData
+                0x00800121                PROVIDE (__bss_end, .)
+                0x000008a6                __data_load_start = LOADADDR (.data)
+                0x000008b6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800101        0x0
+.noinit         0x00800121        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800101                _end = .
+                0x00800121                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -439,7 +635,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf0
+.debug_aranges  0x00000000       0xf8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 board.o
@@ -448,68 +644,69 @@ END GROUP
  .debug_aranges
                 0x00000070       0x20 main.o
  .debug_aranges
-                0x00000090       0x20 servo.o
+                0x00000090       0x28 servo.o
  .debug_aranges
-                0x000000b0       0x40 RS485.o
+                0x000000b8       0x40 RS485.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xda9
+.debug_info     0x00000000      0xf0d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_info    0x000005f4      0x151 board.o
- .debug_info    0x00000745      0x286 LTR559.o
- .debug_info    0x000009cb      0x20e main.o
- .debug_info    0x00000bd9       0x94 servo.o
- .debug_info    0x00000c6d      0x13c RS485.o
+ .debug_info    0x00000745      0x2b6 LTR559.o
+ .debug_info    0x000009fb      0x2d7 main.o
+ .debug_info    0x00000cd2       0xff servo.o
+ .debug_info    0x00000dd1      0x13c RS485.o
 
-.debug_abbrev   0x00000000      0xa0f
+.debug_abbrev   0x00000000      0xb10
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_abbrev  0x000005a2       0xdc board.o
- .debug_abbrev  0x0000067e      0x159 LTR559.o
- .debug_abbrev  0x000007d7       0xf5 main.o
- .debug_abbrev  0x000008cc       0x4f servo.o
- .debug_abbrev  0x0000091b       0xf4 RS485.o
+ .debug_abbrev  0x0000067e      0x182 LTR559.o
+ .debug_abbrev  0x00000800      0x173 main.o
+ .debug_abbrev  0x00000973       0xa9 servo.o
+ .debug_abbrev  0x00000a1c       0xf4 RS485.o
 
-.debug_line     0x00000000      0x884
+.debug_line     0x00000000      0x8d0
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_line    0x00000134      0x16a board.o
- .debug_line    0x0000029e      0x240 LTR559.o
- .debug_line    0x000004de      0x1be main.o
- .debug_line    0x0000069c       0xab servo.o
- .debug_line    0x00000747      0x13d RS485.o
+ .debug_line    0x0000029e      0x252 LTR559.o
+ .debug_line    0x000004f0      0x1d6 main.o
+ .debug_line    0x000006c6       0xcd servo.o
+ .debug_line    0x00000793      0x13d RS485.o
 
-.debug_frame    0x00000000      0x1b0
+.debug_frame    0x00000000      0x218
  *(.debug_frame)
  .debug_frame   0x00000000       0x34 board.o
- .debug_frame   0x00000034       0x9c LTR559.o
- .debug_frame   0x000000d0       0x24 main.o
- .debug_frame   0x000000f4       0x24 servo.o
- .debug_frame   0x00000118       0x98 RS485.o
+ .debug_frame   0x00000034       0xd0 LTR559.o
+ .debug_frame   0x00000104       0x34 main.o
+ .debug_frame   0x00000138       0x48 servo.o
+ .debug_frame   0x00000180       0x98 RS485.o
 
-.debug_str      0x00000000      0x4cf
+.debug_str      0x00000000      0x519
  *(.debug_str)
  .debug_str     0x00000000      0x209 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_str     0x00000209      0x196 board.o
                                 0x1ca (size before relaxing)
- .debug_str     0x0000039f       0xac LTR559.o
-                                0x20a (size before relaxing)
- .debug_str     0x0000044b       0x30 main.o
-                                0x207 (size before relaxing)
- .debug_str     0x0000047b        0xd servo.o
-                                0x17f (size before relaxing)
- .debug_str     0x00000488       0x47 RS485.o
+ .debug_str     0x0000039f       0xc7 LTR559.o
+                                0x225 (size before relaxing)
+ .debug_str     0x00000466       0x5f main.o
+                                0x22a (size before relaxing)
+ .debug_str     0x000004c5        0xd servo.o
+                                0x19b (size before relaxing)
+ .debug_str     0x000004d2       0x47 RS485.o
                                 0x1d9 (size before relaxing)
 
-.debug_loc      0x00000000      0x3a3
+.debug_loc      0x00000000      0x4c9
  *(.debug_loc)
  .debug_loc     0x00000000       0x90 board.o
- .debug_loc     0x00000090      0x120 LTR559.o
- .debug_loc     0x000001b0       0xd8 main.o
- .debug_loc     0x00000288      0x11b RS485.o
+ .debug_loc     0x00000090      0x1a2 LTR559.o
+ .debug_loc     0x00000232       0xf0 main.o
+ .debug_loc     0x00000322       0x8c servo.o
+ .debug_loc     0x000003ae      0x11b RS485.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -529,13 +726,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xa0
+.debug_ranges   0x00000000       0xa8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x18 board.o
  .debug_ranges  0x00000018       0x38 LTR559.o
  .debug_ranges  0x00000050       0x10 main.o
- .debug_ranges  0x00000060       0x10 servo.o
- .debug_ranges  0x00000070       0x30 RS485.o
+ .debug_ranges  0x00000060       0x18 servo.o
+ .debug_ranges  0x00000078       0x30 RS485.o
 
 .debug_macro
  *(.debug_macro)
