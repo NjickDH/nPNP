@@ -23,6 +23,6 @@ void LTR559_Init();
 void TWI_Init();
 uint8_t TWI_Read_register(uint8_t registerValue);
 void TWI_Write_register(uint8_t register, uint8_t data);
-void TWI_Read_proximity();
+uint16_t TWI_Read_proximity();
 
 #endif

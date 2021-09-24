@@ -51,7 +51,7 @@ uint8_t TWI_Read_register(uint8_t registerValue)
 	wait_for_completion;
 			
 	/*switch master to read (receiver) mode and slave to transmitter*/
-	TWCR = (1 << TWEN) | (1 << TWINT) | (1 << TWSTA); //set another start condition
+	TWCR = (1 << TWEN) | (1 << TWINT) | (1 << TWSTA); //Set another start condition
 	wait_for_completion;
 	
 	TWDR = LTR_READ;
@@ -77,44 +77,43 @@ void TWI_Write_register(uint8_t reg, uint8_t data)
 	wait_for_completion;
 	
 	/*send the address*/
-	TWDR = LTR_WRITE;                         // data to send - ie, address + write bit
-	TWCR = ((1 << TWEN) | (1 << TWINT));  // trigger I2C action
+	TWDR = LTR_WRITE;                       //Data to send - ie, address + write bit
+	TWCR = ((1 << TWEN) | (1 << TWINT));	//Trigger I2C action
 	wait_for_completion;
 	
 	/*send the register address*/
-	TWDR = reg;                         // register address
-	TWCR = ((1 << TWEN )| (1 << TWINT));  // trigger I2C action
+	TWDR = reg;								//Register address
+	TWCR = ((1 << TWEN )| (1 << TWINT));	//Trigger I2C action
 	wait_for_completion;
 	
 	/*send the data byte*/
-	TWDR = data;                         // data byte
-	TWCR = ((1 << TWEN) | (1 << TWINT));  // trigger I2C action
+	TWDR = data;							//Data byte
+	TWCR = ((1 << TWEN) | (1 << TWINT));	//Trigger I2C action
 	wait_for_completion;
 	
 	/*set the stop condition*/
 	TWCR = ((1 << TWEN) | (1 << TWINT) | (1 << TWSTO));
 }
 
-void TWI_Read_proximity()
+uint16_t TWI_Read_proximity()
 {
 	uint16_t psData = 0;
 	psData = TWI_Read_register(0x8D);
 	psData += TWI_Read_register(0x8E) << 8;
 
-	RS485_Transmit_byte(psData);
-	RS485_Transmit_byte(psData >> 8);
+	return psData;
 }
 
-volatile int edgeCount = 0;
+volatile int encoderCount = 0;
 extern volatile float cDutyCycle;
+extern volatile int selfEncodingStatus;
 ISR(PCINT1_vect)
 {	
-	if(cDutyCycle >= 1.5f)
+	if(selfEncodingStatus != 1)
 	{
-		edgeCount++;
-	}
-	else if(cDutyCycle <= 1.5f)
-	{
-		edgeCount--;
+		if(cDutyCycle >= 1.5f)
+		encoderCount++;
+		else if(cDutyCycle <= 1.5f)
+		encoderCount--;
 	}
 }
