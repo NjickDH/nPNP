@@ -1,4 +1,5 @@
-main.d main.o: .././main.c .././board.h .././RS485.h .././Board.h \
+configure.d configure.o: .././configure.c .././board.h .././RS485.h \
+ .././Board.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  .././servo.h .././LTR559.h .././eeprom.h \
@@ -17,7 +18,6 @@ main.d main.o: .././main.c .././board.h .././RS485.h .././Board.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include-fixed\limits.h \
  .././configure.h \
- d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
@@ -67,8 +67,6 @@ d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.
 d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include-fixed\limits.h:
 
 .././configure.h:
-
-d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
 d:\program\ files\microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
 

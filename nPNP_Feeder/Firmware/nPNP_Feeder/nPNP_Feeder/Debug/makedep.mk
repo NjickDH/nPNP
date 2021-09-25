@@ -4,6 +4,8 @@
 
 board.c
 
+configure.c
+
 eeprom.c
 
 LTR559.c

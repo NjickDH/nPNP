@@ -1,12 +1,16 @@
 #include "RS485.h"
 #include "servo.h"
 #include "Board.h"
+#include "configure.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>
 #include <string.h>
 
-volatile uint8_t uartData;
+volatile uint8_t uartData[20] = {0};
+volatile uint8_t uartDataCounter = 0;
+
+extern int setpoint;
 
 void RS485_init()
 {
@@ -36,9 +40,60 @@ void RS485_Transmit_string(char *string)
 	}
 }
 
+void RS485_Parse_Data()
+{
+	if(uartData[0] == 1)
+	{
+		//Wait untill full packet has been received
+		if(uartData[1] == uartDataCounter)
+		{
+			switch(uartData[2])
+			{
+				case 0x01: //Self configure command
+				{
+					selfConfigure();
+					break;
+				}
+				case 0x02: //Move tape command
+				{
+					if(uartData[3] == 1)
+					{
+						setpoint -= uartData[4];
+					}
+					else
+					{
+						setpoint += uartData[4];
+					}
+					break;
+				}
+			}
+			
+			//reset buffer and counter
+			for(int i = 0; i < uartDataCounter; i++)
+			{
+				uartData[i] = 0;
+			}
+			uartDataCounter = 0;
+		}
+	}
+	else if(uartData[0] != 1)
+	{
+		if(uartData[1] == uartDataCounter)
+		{
+			//Reset buffer since data is not for us
+			for(int i = 0; i < uartDataCounter; i++)
+			{
+				uartData[i] = 0;
+			}
+			uartDataCounter = 0;
+		}
+	}
+}
+
 ISR(USART_RX_vect)
 {
-	uartData = UDR0; //Received data must be read to clear RXC flag
+	uartData[uartDataCounter] = UDR0; //Received data must be read to clear RXC flag
+	uartDataCounter = (uartDataCounter + 1) % 20;
 }
 
 ISR(USART_TX_vect)

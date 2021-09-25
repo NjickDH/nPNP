@@ -26,9 +26,7 @@ void LTR559_Init()
 	uint16_t upperThreshold = 0;
 	upperThreshold = EEPROM_read(1);
 	upperThreshold |= (EEPROM_read(2) << 8);
-	
-	RS485_Transmit_byte((int16_t)upperThreshold);
-	RS485_Transmit_byte((int16_t)upperThreshold >> 8);
+
 	TWI_Write_register(PS_THRES_UP_0, upperThreshold); //Upper interrupt threshold - 12 bit value
 	TWI_Write_register(PS_THRES_UP_1, upperThreshold >> 8);
 	TWI_Write_register(PS_THRES_LOW_0, 0); //Lower interrupt threshold - 12 bit value

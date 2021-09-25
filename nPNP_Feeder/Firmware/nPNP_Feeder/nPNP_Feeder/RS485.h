@@ -10,5 +10,6 @@
 void RS485_init();
 void RS485_Transmit_byte(uint8_t data);
 void RS485_Transmit_string(char *string);
+void RS485_Parse_Data();
 
 #endif

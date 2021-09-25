@@ -171,6 +171,12 @@
     <Compile Include="board.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="configure.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="configure.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="eeprom.c">
       <SubType>compile</SubType>
     </Compile>

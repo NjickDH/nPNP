@@ -2,7 +2,8 @@
 #define BOARD_HEADER
 
 #define S_PID			0
-#define S_SELF_CONF		1
+#define S_SELF_CONF		0
+
 #define F_CPU			16000000UL
 
 #define BUTTON_A		PIND2
