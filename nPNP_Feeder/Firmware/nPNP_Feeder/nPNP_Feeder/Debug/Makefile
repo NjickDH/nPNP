@@ -38,6 +38,7 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../board.c \
+../eeprom.c \
 ../LTR559.c \
 ../main.c \
 ../servo.c \
@@ -52,6 +53,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 board.o \
+eeprom.o \
 LTR559.o \
 main.o \
 servo.o \
@@ -59,6 +61,7 @@ RS485.o
 
 OBJS_AS_ARGS +=  \
 board.o \
+eeprom.o \
 LTR559.o \
 main.o \
 servo.o \
@@ -66,6 +69,7 @@ RS485.o
 
 C_DEPS +=  \
 board.d \
+eeprom.d \
 LTR559.d \
 main.d \
 servo.d \
@@ -73,6 +77,7 @@ RS485.d
 
 C_DEPS_AS_ARGS +=  \
 board.d \
+eeprom.d \
 LTR559.d \
 main.d \
 servo.d \
@@ -93,6 +98,13 @@ LINKER_SCRIPT_DEP+=
 
 # AVR32/GNU C Compiler
 ./board.o: .././board.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Program Files\Microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DDEBUG  -I"D:\Program Files\Microchip\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega48a -B "D:\Program Files\Microchip\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega48a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./eeprom.o: .././eeprom.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Program Files\Microchip\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DDEBUG  -I"D:\Program Files\Microchip\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega48a -B "D:\Program Files\Microchip\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega48a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

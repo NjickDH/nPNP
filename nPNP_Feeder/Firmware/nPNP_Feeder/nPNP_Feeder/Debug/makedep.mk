@@ -4,6 +4,8 @@
 
 board.c
 
+eeprom.c
+
 LTR559.c
 
 main.c

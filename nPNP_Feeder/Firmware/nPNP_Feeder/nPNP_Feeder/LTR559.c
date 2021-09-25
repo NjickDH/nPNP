@@ -2,6 +2,7 @@
 #include "LTR559.h"
 #include "RS485.h"
 #include "servo.h"
+#include "eeprom.h"
 #include <avr/io.h>
 #include <stdint.h>
 #include <avr/interrupt.h>
@@ -20,8 +21,16 @@ void LTR559_Init()
 	TWI_Write_register(PS_LED, 0b00011111); //60Khz LED pulse - DUTY 50% - LED 50mA
 	TWI_Write_register(PS_CONTR, 0x03); //Active mode - saturation indicator off
 	TWI_Write_register(PS_MEAS_RATE, 0x08); //10ms measurement repeat rate
-	TWI_Write_register(PS_THRES_UP_0, 150); //Upper interrupt threshold - 12 bit value
-	TWI_Write_register(PS_THRES_UP_1, 0);
+	
+	/* Read threshold value from EEPROM previously saved by a self configure */
+	uint16_t upperThreshold = 0;
+	upperThreshold = EEPROM_read(1);
+	upperThreshold |= (EEPROM_read(2) << 8);
+	
+	RS485_Transmit_byte((int16_t)upperThreshold);
+	RS485_Transmit_byte((int16_t)upperThreshold >> 8);
+	TWI_Write_register(PS_THRES_UP_0, upperThreshold); //Upper interrupt threshold - 12 bit value
+	TWI_Write_register(PS_THRES_UP_1, upperThreshold >> 8);
 	TWI_Write_register(PS_THRES_LOW_0, 0); //Lower interrupt threshold - 12 bit value
 	TWI_Write_register(PS_THRES_LOW_1, 0);
 	
@@ -111,9 +120,9 @@ ISR(PCINT1_vect)
 {	
 	if(selfEncodingStatus != 1)
 	{
-		if(cDutyCycle >= 1.5f)
-		encoderCount++;
-		else if(cDutyCycle <= 1.5f)
-		encoderCount--;
+		if(cDutyCycle > 1.5f)
+			encoderCount++;
+		else if(cDutyCycle < 1.5f)
+			encoderCount--;
 	}
 }

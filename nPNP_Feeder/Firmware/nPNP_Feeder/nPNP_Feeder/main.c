@@ -9,6 +9,7 @@
 #include "RS485.h"
 #include "servo.h"
 #include "LTR559.h"
+#include "eeprom.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
@@ -19,7 +20,7 @@ volatile int selfEncodingStatus = 0;
 
 /* PID variables */
 float kp = 15;
-float kd = 0.025;
+float kd = 0;
 float ki = 50;
 
 float ePrev = 0; //Previous error
@@ -33,9 +34,9 @@ int main(void)
 	Timer_init();
 	RS485_init();
 	LTR559_Init();
-	
+		
 	sei(); //Enable interrupts
-	
+
     while (1) 
 	{	
 		/***** PID Control *****/
@@ -99,10 +100,6 @@ int main(void)
 										
 						for(int i = 1; i < 100; i++)
 						{
-							RS485_Transmit_byte(sampleBuffer[i-1]);
-							RS485_Transmit_byte(sampleBuffer[i-1] >> 8);
-							RS485_Transmit_byte(sampleBuffer[i]);
-							RS485_Transmit_byte(sampleBuffer[i] >> 8);
 							if(sampleBuffer[i] > sampleBuffer[i - 1] && sampleBuffer[i] > sampleBuffer[i + 1])
 							{
 								peaks[peakCounter] = sampleBuffer[i];
@@ -127,6 +124,12 @@ int main(void)
 					uint16_t middleValue = ((peakSum/peakCounter) + (valleySum/valleyCounter)) / 2;
 					TWI_Write_register(PS_THRES_UP_0, middleValue); //Upper interrupt threshold - 12 bit value
 					TWI_Write_register(PS_THRES_UP_1, middleValue >> 8);
+					TWI_Write_register(PS_THRES_LOW_0, 0); //Lower interrupt threshold - 12 bit value
+					TWI_Write_register(PS_THRES_LOW_1, 0);
+					
+					//Save value in EEPROM so that it can be used upon next power cycle
+					EEPROM_write(1, middleValue);
+					EEPROM_write(2, middleValue >> 8);
 					
 					#if S_SELF_CONF
 						for(int i = 1; i < 100; i++)

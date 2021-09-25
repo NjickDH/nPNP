@@ -5,7 +5,7 @@ d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
                               d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o) (__addsf3x)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
-                              LTR559.o (__lesf2)
+                              LTR559.o (__ltsf2)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
                               main.o (__divsf3)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
@@ -31,7 +31,7 @@ d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
                               d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_zero)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
-                              LTR559.o (__gesf2)
+                              main.o (__gesf2)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
                               main.o (__mulsf3)
 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
@@ -67,6 +67,9 @@ Discarded input sections
  .bss           0x00000000        0x0 board.o
  .text.Error_Handler
                 0x00000000       0x46 board.o
+ .text          0x00000000        0x0 eeprom.o
+ .data          0x00000000        0x0 eeprom.o
+ .bss           0x00000000        0x0 eeprom.o
  .text          0x00000000        0x0 LTR559.o
  .data          0x00000000        0x0 LTR559.o
  .bss           0x00000000        0x0 LTR559.o
@@ -272,6 +275,7 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
 LOAD board.o
+LOAD eeprom.o
 LOAD LTR559.o
 LOAD main.o
 LOAD servo.o
@@ -385,7 +389,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xde2
+.text           0x00000000      0xe3e
  *(.vectors)
  .vectors       0x00000000       0x34 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
                 0x00000000                __vector_default
@@ -472,131 +476,137 @@ END GROUP
  .text.Board_init
                 0x0000006c       0x1e board.o
                 0x0000006c                Board_init
+ .text.EEPROM_write
+                0x0000008a       0x1c eeprom.o
+                0x0000008a                EEPROM_write
+ .text.EEPROM_read
+                0x000000a6       0x16 eeprom.o
+                0x000000a6                EEPROM_read
  .text.TWI_Init
-                0x0000008a        0x8 LTR559.o
-                0x0000008a                TWI_Init
+                0x000000bc        0x8 LTR559.o
+                0x000000bc                TWI_Init
  .text.TWI_Read_register
-                0x00000092       0x70 LTR559.o
-                0x00000092                TWI_Read_register
+                0x000000c4       0x70 LTR559.o
+                0x000000c4                TWI_Read_register
  .text.TWI_Write_register
-                0x00000102       0x4e LTR559.o
-                0x00000102                TWI_Write_register
+                0x00000134       0x4e LTR559.o
+                0x00000134                TWI_Write_register
  .text.LTR559_Init
-                0x00000150       0x48 LTR559.o
-                0x00000150                LTR559_Init
+                0x00000182       0x7c LTR559.o
+                0x00000182                LTR559_Init
  .text.TWI_Read_proximity
-                0x00000198       0x20 LTR559.o
-                0x00000198                TWI_Read_proximity
+                0x000001fe       0x20 LTR559.o
+                0x000001fe                TWI_Read_proximity
  .text.__vector_4
-                0x000001b8       0xb2 LTR559.o
-                0x000001b8                __vector_4
- .text.main     0x0000026a      0x55c main.o
-                0x0000026a                main
+                0x0000021e       0xb2 LTR559.o
+                0x0000021e                __vector_4
+ .text.main     0x000002d0      0x552 main.o
+                0x000002d0                main
  .text.DUTY_CYCLE
-                0x000007c6       0x48 servo.o
-                0x000007c6                DUTY_CYCLE
+                0x00000822       0x48 servo.o
+                0x00000822                DUTY_CYCLE
  .text.Timer_init
-                0x0000080e       0x24 servo.o
-                0x0000080e                Timer_init
+                0x0000086a       0x24 servo.o
+                0x0000086a                Timer_init
  .text.RS485_init
-                0x00000832       0x20 RS485.o
-                0x00000832                RS485_init
+                0x0000088e       0x20 RS485.o
+                0x0000088e                RS485_init
  .text.RS485_Transmit_byte
-                0x00000852       0x14 RS485.o
-                0x00000852                RS485_Transmit_byte
+                0x000008ae       0x14 RS485.o
+                0x000008ae                RS485_Transmit_byte
  .text.__vector_18
-                0x00000866       0x20 RS485.o
-                0x00000866                __vector_18
+                0x000008c2       0x20 RS485.o
+                0x000008c2                __vector_18
  .text.__vector_20
-                0x00000886       0x1e RS485.o
-                0x00000886                __vector_20
+                0x000008e2       0x1e RS485.o
+                0x000008e2                __vector_20
  .text.avr-libc.fplib
-                0x000008a4        0xa d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
-                0x000008a4                __subsf3
-                0x000008a6                __addsf3
+                0x00000900        0xa d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
+                0x00000900                __subsf3
+                0x00000902                __addsf3
  .text.avr-libc.fplib
-                0x000008ae       0xc0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
-                0x000008c8                __addsf3x
+                0x0000090a       0xc0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
+                0x00000924                __addsf3x
  .text.avr-libc.fplib
-                0x0000096e        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
-                0x0000096e                __nesf2
-                0x0000096e                __eqsf2
-                0x0000096e                __cmpsf2
-                0x0000096e                __ltsf2
-                0x0000096e                __lesf2
+                0x000009ca        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
+                0x000009ca                __nesf2
+                0x000009ca                __eqsf2
+                0x000009ca                __cmpsf2
+                0x000009ca                __ltsf2
+                0x000009ca                __lesf2
  .text.avr-libc.fplib
-                0x00000976        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
-                0x00000976                __divsf3
+                0x000009d2        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3.o)
+                0x000009d2                __divsf3
  .text.avr-libc.fplib
-                0x0000097a       0xcc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
-                0x00000990                __divsf3x
-                0x00000994                __divsf3_pse
+                0x000009d6       0xcc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(divsf3x.o)
+                0x000009ec                __divsf3x
+                0x000009f0                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000a46       0x58 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
-                0x00000a46                __fixunssfsi
+                0x00000aa2       0x58 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
+                0x00000aa2                __fixunssfsi
  .text.avr-libc.fplib
-                0x00000a9e       0x7a d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
-                0x00000a9e                __floatunsisf
-                0x00000aa2                __floatsisf
+                0x00000afa       0x7a d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
+                0x00000afa                __floatunsisf
+                0x00000afe                __floatsisf
  .text.avr-libc.fplib
-                0x00000b18       0x48 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
-                0x00000b18                __fp_cmp
+                0x00000b74       0x48 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
+                0x00000b74                __fp_cmp
  .text.avr-libc.fplib
-                0x00000b60        0xc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
-                0x00000b60                __fp_inf
+                0x00000bbc        0xc d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
+                0x00000bbc                __fp_inf
  .text.avr-libc.fplib
-                0x00000b6c        0x6 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
-                0x00000b6c                __fp_nan
+                0x00000bc8        0x6 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_nan.o)
+                0x00000bc8                __fp_nan
  .text.avr-libc.fplib
-                0x00000b72        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
-                0x00000b72                __fp_pscA
+                0x00000bce        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscA.o)
+                0x00000bce                __fp_pscA
  .text.avr-libc.fplib
-                0x00000b80        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
-                0x00000b80                __fp_pscB
+                0x00000bdc        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_pscB.o)
+                0x00000bdc                __fp_pscB
  .text.avr-libc.fplib
-                0x00000b8e       0x22 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
-                0x00000b8e                __fp_round
+                0x00000bea       0x22 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_round.o)
+                0x00000bea                __fp_round
  .text.avr-libc.fplib
-                0x00000bb0       0x44 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
-                0x00000bb0                __fp_split3
-                0x00000bc0                __fp_splitA
+                0x00000c0c       0x44 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_split3.o)
+                0x00000c0c                __fp_split3
+                0x00000c1c                __fp_splitA
  .text.avr-libc.fplib
-                0x00000bf4        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
-                0x00000bf4                __fp_zero
-                0x00000bf6                __fp_szero
+                0x00000c50        0xe d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
+                0x00000c50                __fp_zero
+                0x00000c52                __fp_szero
  .text.avr-libc.fplib
-                0x00000c02        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
-                0x00000c02                __gesf2
-                0x00000c02                __gtsf2
+                0x00000c5e        0x8 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
+                0x00000c5e                __gesf2
+                0x00000c5e                __gtsf2
  .text.avr-libc.fplib
-                0x00000c0a        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
-                0x00000c0a                __mulsf3
+                0x00000c66        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
+                0x00000c66                __mulsf3
  .text.avr-libc.fplib
-                0x00000c0e       0xc2 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
-                0x00000c22                __mulsf3x
-                0x00000c26                __mulsf3_pse
+                0x00000c6a       0xc2 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
+                0x00000c7e                __mulsf3x
+                0x00000c82                __mulsf3_pse
  .text.libgcc.div
-                0x00000cd0       0x28 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmodhi4.o)
-                0x00000cd0                __udivmodhi4
+                0x00000d2c       0x28 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmodhi4.o)
+                0x00000d2c                __udivmodhi4
  .text.libgcc.div
-                0x00000cf8       0x1a d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivdi3.o)
-                0x00000cf8                __umoddi3
-                0x00000cfc                __udivdi3
-                0x00000cfe                __udivdi3_umoddi3
+                0x00000d54       0x1a d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivdi3.o)
+                0x00000d54                __umoddi3
+                0x00000d58                __udivdi3
+                0x00000d5a                __udivdi3_umoddi3
  .text.libgcc.div
-                0x00000d12       0x7e d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmod64.o)
-                0x00000d12                __udivmod64
+                0x00000d6e       0x7e d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmod64.o)
+                0x00000d6e                __udivmod64
  .text.libgcc.builtins
-                0x00000d90       0x3c d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_ashrdi3.o)
-                0x00000d90                __ashrdi3
-                0x00000d94                __lshrdi3
- .text.libgcc   0x00000dcc       0x12 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_adddi3.o)
-                0x00000dcc                __adddi3
-                0x00000dde                . = ALIGN (0x2)
+                0x00000dec       0x3c d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_ashrdi3.o)
+                0x00000dec                __ashrdi3
+                0x00000df0                __lshrdi3
+ .text.libgcc   0x00000e28       0x12 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_adddi3.o)
+                0x00000e28                __adddi3
+                0x00000e3a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000dde        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
-                0x00000dde                _exit
-                0x00000dde                exit
+ .fini9         0x00000e3a        0x0 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x00000e3a                _exit
+                0x00000e3a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -615,11 +625,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000dde        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .fini0         0x00000e3a        0x4 d:/program files/microchip/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000de2                _etext = .
+                0x00000e3e                _etext = .
 
-.data           0x00800100       0x10 load address 0x00000de2
+.data           0x00800100        0xc load address 0x00000e3e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -627,32 +637,32 @@ END GROUP
                 0x00800100                dt
  .data.ki       0x00800104        0x4 main.o
                 0x00800104                ki
- .data.kd       0x00800108        0x4 main.o
-                0x00800108                kd
- .data.kp       0x0080010c        0x4 main.o
-                0x0080010c                kp
+ .data.kp       0x00800108        0x4 main.o
+                0x00800108                kp
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800110                . = ALIGN (0x2)
-                0x00800110                _edata = .
-                0x00800110                PROVIDE (__data_end, .)
+                0x0080010c                . = ALIGN (0x2)
+                0x0080010c                _edata = .
+                0x0080010c                PROVIDE (__data_end, .)
 
-.bss            0x00800110       0x13
-                0x00800110                PROVIDE (__bss_start, .)
+.bss            0x0080010c       0x17
+                0x0080010c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.encoderCount
-                0x00800110        0x2 LTR559.o
-                0x00800110                encoderCount
- .bss.setpoint  0x00800112        0x2 main.o
-                0x00800112                setpoint
+                0x0080010c        0x2 LTR559.o
+                0x0080010c                encoderCount
+ .bss.setpoint  0x0080010e        0x2 main.o
+                0x0080010e                setpoint
  .bss.eIntergral
-                0x00800114        0x4 main.o
-                0x00800114                eIntergral
- .bss.ePrev     0x00800118        0x4 main.o
-                0x00800118                ePrev
+                0x00800110        0x4 main.o
+                0x00800110                eIntergral
+ .bss.ePrev     0x00800114        0x4 main.o
+                0x00800114                ePrev
+ .bss.kd        0x00800118        0x4 main.o
+                0x00800118                kd
  .bss.selfEncodingStatus
                 0x0080011c        0x2 main.o
                 0x0080011c                selfEncodingStatus
@@ -663,8 +673,8 @@ END GROUP
  COMMON         0x00800122        0x1 RS485.o
                 0x00800122                uartData
                 0x00800123                PROVIDE (__bss_end, .)
-                0x00000de2                __data_load_start = LOADADDR (.data)
-                0x00000df2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000e3e                __data_load_start = LOADADDR (.data)
+                0x00000e4a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800123        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -714,6 +724,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 board.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 eeprom.o
  .comment       0x00000030       0x31 LTR559.o
  .comment       0x00000030       0x31 main.o
  .comment       0x00000030       0x31 servo.o
@@ -739,78 +750,87 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf8
+.debug_aranges  0x00000000      0x120
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 board.o
  .debug_aranges
-                0x00000028       0x48 LTR559.o
+                0x00000028       0x28 eeprom.o
  .debug_aranges
-                0x00000070       0x20 main.o
+                0x00000050       0x48 LTR559.o
  .debug_aranges
-                0x00000090       0x28 servo.o
+                0x00000098       0x20 main.o
  .debug_aranges
-                0x000000b8       0x40 RS485.o
+                0x000000b8       0x28 servo.o
+ .debug_aranges
+                0x000000e0       0x40 RS485.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x116a
+.debug_info     0x00000000     0x1303
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_info    0x000005f4      0x151 board.o
- .debug_info    0x00000745      0x292 LTR559.o
- .debug_info    0x000009d7      0x558 main.o
- .debug_info    0x00000f2f       0xff servo.o
- .debug_info    0x0000102e      0x13c RS485.o
+ .debug_info    0x00000745       0xd9 eeprom.o
+ .debug_info    0x0000081e      0x321 LTR559.o
+ .debug_info    0x00000b3f      0x589 main.o
+ .debug_info    0x000010c8       0xff servo.o
+ .debug_info    0x000011c7      0x13c RS485.o
 
-.debug_abbrev   0x00000000      0xb1b
+.debug_abbrev   0x00000000      0xbb8
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_abbrev  0x000005a2       0xdc board.o
- .debug_abbrev  0x0000067e      0x172 LTR559.o
- .debug_abbrev  0x000007f0      0x18e main.o
- .debug_abbrev  0x0000097e       0xa9 servo.o
- .debug_abbrev  0x00000a27       0xf4 RS485.o
+ .debug_abbrev  0x0000067e       0x8b eeprom.o
+ .debug_abbrev  0x00000709      0x184 LTR559.o
+ .debug_abbrev  0x0000088d      0x18e main.o
+ .debug_abbrev  0x00000a1b       0xa9 servo.o
+ .debug_abbrev  0x00000ac4       0xf4 RS485.o
 
-.debug_line     0x00000000      0xa5c
+.debug_line     0x00000000      0xb9b
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_line    0x00000134      0x16a board.o
- .debug_line    0x0000029e      0x241 LTR559.o
- .debug_line    0x000004df      0x373 main.o
- .debug_line    0x00000852       0xcd servo.o
- .debug_line    0x0000091f      0x13d RS485.o
+ .debug_line    0x0000029e       0xfe eeprom.o
+ .debug_line    0x0000039c      0x276 LTR559.o
+ .debug_line    0x00000612      0x37f main.o
+ .debug_line    0x00000991       0xcd servo.o
+ .debug_line    0x00000a5e      0x13d RS485.o
 
-.debug_frame    0x00000000      0x214
+.debug_frame    0x00000000      0x25c
  *(.debug_frame)
  .debug_frame   0x00000000       0x34 board.o
- .debug_frame   0x00000034       0xc8 LTR559.o
- .debug_frame   0x000000fc       0x38 main.o
- .debug_frame   0x00000134       0x48 servo.o
- .debug_frame   0x0000017c       0x98 RS485.o
+ .debug_frame   0x00000034       0x34 eeprom.o
+ .debug_frame   0x00000068       0xdc LTR559.o
+ .debug_frame   0x00000144       0x38 main.o
+ .debug_frame   0x0000017c       0x48 servo.o
+ .debug_frame   0x000001c4       0x98 RS485.o
 
-.debug_str      0x00000000      0x598
+.debug_str      0x00000000      0x5df
  *(.debug_str)
  .debug_str     0x00000000      0x209 D:/Program Files/Microchip/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega48a/avr4/crtatmega48a.o
  .debug_str     0x00000209      0x196 board.o
                                 0x1ca (size before relaxing)
- .debug_str     0x0000039f       0xc9 LTR559.o
-                                0x227 (size before relaxing)
- .debug_str     0x00000468       0xdc main.o
-                                0x2ec (size before relaxing)
- .debug_str     0x00000544        0xd servo.o
+ .debug_str     0x0000039f       0x41 eeprom.o
+                                0x19a (size before relaxing)
+ .debug_str     0x000003e0       0xe3 LTR559.o
+                                0x25e (size before relaxing)
+ .debug_str     0x000004c3       0xc8 main.o
+                                0x2f9 (size before relaxing)
+ .debug_str     0x0000058b        0xd servo.o
                                 0x19b (size before relaxing)
- .debug_str     0x00000551       0x47 RS485.o
+ .debug_str     0x00000598       0x47 RS485.o
                                 0x1d9 (size before relaxing)
 
-.debug_loc      0x00000000      0x703
+.debug_loc      0x00000000      0x7d8
  *(.debug_loc)
  .debug_loc     0x00000000       0x90 board.o
- .debug_loc     0x00000090      0x198 LTR559.o
- .debug_loc     0x00000228      0x334 main.o
- .debug_loc     0x0000055c       0x8c servo.o
- .debug_loc     0x000005e8      0x11b RS485.o
+ .debug_loc     0x00000090       0x58 eeprom.o
+ .debug_loc     0x000000e8      0x215 LTR559.o
+ .debug_loc     0x000002fd      0x334 main.o
+ .debug_loc     0x00000631       0x8c servo.o
+ .debug_loc     0x000006bd      0x11b RS485.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -830,13 +850,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xc0
+.debug_ranges   0x00000000       0xd8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x18 board.o
- .debug_ranges  0x00000018       0x38 LTR559.o
- .debug_ranges  0x00000050       0x28 main.o
- .debug_ranges  0x00000078       0x18 servo.o
- .debug_ranges  0x00000090       0x30 RS485.o
+ .debug_ranges  0x00000018       0x18 eeprom.o
+ .debug_ranges  0x00000030       0x38 LTR559.o
+ .debug_ranges  0x00000068       0x28 main.o
+ .debug_ranges  0x00000090       0x18 servo.o
+ .debug_ranges  0x000000a8       0x30 RS485.o
 
 .debug_macro
  *(.debug_macro)
